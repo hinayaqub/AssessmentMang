@@ -30,5 +30,12 @@ namespace CLOApp
             s1.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AttendenceDetail ad = new AttendenceDetail();
+            ad.Show();
+            this.Hide();
+        }
     }
 }

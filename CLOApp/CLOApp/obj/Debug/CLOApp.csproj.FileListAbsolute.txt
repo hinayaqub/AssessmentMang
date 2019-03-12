@@ -11,3 +11,19 @@ c:\users\ahmad\documents\visual studio 2015\Projects\CLOApp\CLOApp\obj\Debug\CLO
 c:\users\ahmad\documents\visual studio 2015\Projects\CLOApp\CLOApp\obj\Debug\CLOApp.AddStudents.resources
 c:\users\ahmad\documents\visual studio 2015\Projects\CLOApp\CLOApp\obj\Debug\CLOApp.StudentsDetails.resources
 C:\Users\Ahmad\Documents\Visual Studio 2015\Projects\CLOApp\CLOApp\obj\Debug\CLOApp.EditStdDetail.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\bin\Debug\CLOApp.exe.config
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.exe
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.pdb
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\bin\Debug\CLOApp.exe
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\bin\Debug\CLOApp.pdb
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.csprojResolveAssemblyReference.cache
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.AddStudents.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.AttendenceDetail.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.CLODetails.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.CreateAtte.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.EditStdDetail.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.Form1.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.ManageCLO.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.Properties.Resources.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.StudentsDetails.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.csproj.GenerateResource.Cache

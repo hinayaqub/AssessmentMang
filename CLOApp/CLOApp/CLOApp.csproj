@@ -52,11 +52,23 @@
     <Compile Include="AddStudents.Designer.cs">
       <DependentUpon>AddStudents.cs</DependentUpon>
     </Compile>
+    <Compile Include="AttendenceDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendenceDetail.Designer.cs">
+      <DependentUpon>AttendenceDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="CLODetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CLODetails.Designer.cs">
       <DependentUpon>CLODetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAtte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAtte.Designer.cs">
+      <DependentUpon>CreateAtte.cs</DependentUpon>
     </Compile>
     <Compile Include="EditStdDetail.cs">
       <SubType>Form</SubType>
@@ -88,8 +100,14 @@
     <EmbeddedResource Include="AddStudents.resx">
       <DependentUpon>AddStudents.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AttendenceDetail.resx">
+      <DependentUpon>AttendenceDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CLODetails.resx">
       <DependentUpon>CLODetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAtte.resx">
+      <DependentUpon>CreateAtte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditStdDetail.resx">
       <DependentUpon>EditStdDetail.cs</DependentUpon>
