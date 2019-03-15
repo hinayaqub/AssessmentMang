@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace CLOApp
 {
-    public partial class Form1 : Form
+    public partial class ManageData : Form
     {
-        public Form1()
+        public ManageData()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ManageCLO m1 = new ManageCLO();
+            ManageCLO m1 = new  ManageCLO();
             m1.Show();
             this.Hide();
         }
@@ -36,6 +36,16 @@ namespace CLOApp
             AttendenceDetail ad = new AttendenceDetail();
             ad.Show();
             this.Hide();
+        }
+
+        private void ManageData_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

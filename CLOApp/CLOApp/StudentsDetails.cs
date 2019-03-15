@@ -110,6 +110,11 @@ namespace CLOApp
             dataGridView1.Columns.Add(b1);
         }
 
-
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ManageData f1 = new ManageData();
+            f1.Show();
+            this.Hide();
+        }
     }
 }

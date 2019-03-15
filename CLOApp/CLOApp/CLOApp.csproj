@@ -70,17 +70,35 @@
     <Compile Include="CreateAtte.Designer.cs">
       <DependentUpon>CreateAtte.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditClo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditClo.Designer.cs">
+      <DependentUpon>EditClo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editrubric.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editrubric.Designer.cs">
+      <DependentUpon>Editrubric.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditStdDetail.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditStdDetail.Designer.cs">
       <DependentUpon>EditStdDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="ManageData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ManageData.Designer.cs">
+      <DependentUpon>ManageData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateCLO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateCLO.Designer.cs">
+      <DependentUpon>CreateCLO.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageCLO.cs">
       <SubType>Form</SubType>
@@ -91,6 +109,24 @@
     <Compile Include="MyClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RubricDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RubricDetails.Designer.cs">
+      <DependentUpon>RubricDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rubrics1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rubrics1.Designer.cs">
+      <DependentUpon>Rubrics1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RubricsLevel1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RubricsLevel1.Designer.cs">
+      <DependentUpon>RubricsLevel1.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentsDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,11 +145,20 @@
     <EmbeddedResource Include="CreateAtte.resx">
       <DependentUpon>CreateAtte.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditClo.resx">
+      <DependentUpon>EditClo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editrubric.resx">
+      <DependentUpon>Editrubric.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditStdDetail.resx">
       <DependentUpon>EditStdDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ManageData.resx">
+      <DependentUpon>ManageData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateCLO.resx">
+      <DependentUpon>CreateCLO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageCLO.resx">
       <DependentUpon>ManageCLO.cs</DependentUpon>
@@ -127,6 +172,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RubricDetails.resx">
+      <DependentUpon>RubricDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rubrics1.resx">
+      <DependentUpon>Rubrics1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RubricsLevel1.resx">
+      <DependentUpon>RubricsLevel1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentsDetails.resx">
       <DependentUpon>StudentsDetails.cs</DependentUpon>
     </EmbeddedResource>

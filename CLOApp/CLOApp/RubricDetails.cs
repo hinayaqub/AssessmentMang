@@ -11,38 +11,31 @@ using System.Windows.Forms;
 
 namespace CLOApp
 {
-    public partial class ManageCLO : Form
+    public partial class RubricDetails : Form
     {
-        public ManageCLO()
+        public RubricDetails()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CreateCLO c1 = new CreateCLO();
-            c1.Show();
-            this.Hide();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
             DataGridViewRow selected_row = dataGridView1.Rows[index];
-            string id = selected_row.Cells[0].Value.ToString();
-            
-            Int32.TryParse(id, out MyClass.CLOid);
-           
-            if (e.ColumnIndex == 4)
+            string id = selected_row.Cells[1].Value.ToString();
+
+            Int32.TryParse(id, out MyClass.rubricId);
+
+            if (e.ColumnIndex == 3)
             {
                 if (DialogResult.Yes == MessageBox.Show("Do you want to edit the row?", "", MessageBoxButtons.YesNo))
                 {
-                    EditClo cl = new EditClo();
+                    Editrubric cl = new Editrubric();
                     cl.Show();
                     this.Hide();
                 }
             }
-            else if (e.ColumnIndex == 5)
+            else if (e.ColumnIndex == 4)
             {
                 if (DialogResult.Yes == MessageBox.Show("Do you want to delete the row?", "", MessageBoxButtons.YesNo))
                 {
@@ -51,7 +44,7 @@ namespace CLOApp
                     SqlConnection conn1 = new SqlConnection(conURL1);
                     conn1.Open();
 
-                    String cmd1 = "Delete FROM  Clo Where Clo.Id = " + MyClass.CLOid;
+                    String cmd1 = "Delete FROM Rubric Where Rubric.Id = " + MyClass.rubricId;
                     //SqlCommand cmd = new SqlCommand("SELECT * FROM Customer", conn);
                     SqlDataAdapter cmd = new SqlDataAdapter(cmd1, conn1);
                     cmd.SelectCommand.ExecuteNonQuery();
@@ -59,28 +52,54 @@ namespace CLOApp
                     MessageBox.Show("Data Has been successfuly deleted");
                 }
             }
-            else if (e.ColumnIndex == 6)
+            else if (e.ColumnIndex == 5)
             {
-                Rubrics1 r1 = new Rubrics1();
+                RubricsLevel1 r1 = new RubricsLevel1();
                 r1.Show();
                 this.Hide();
             }
         }
 
+        private void RubricDetails_Load(object sender, EventArgs e)
+        {
+            Showdata();
+            Editbtn();
+            Deletebtn();
+            AddRubriclvlbtn();
+        }
+        public void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            //I suppose the group column is column at index 0
+            if (e.ColumnIndex == 0 && e.RowIndex > 0)
+            {
+                if (dataGridView1[0, e.RowIndex].Value == dataGridView1[0, e.RowIndex - 1].Value)
+                    e.Value = "";
+            }
+        }
+        // Function to Show data in Grid View 
+        // From database
         public void Showdata()
         {
             String conURL1 = "Data Source = DESKTOP-RPO4Q5R\\PARVEEN; Initial Catalog =ProjectB; User ID = mohsin; Password = mohsin123; MultipleActiveResultSets = True";
             //String conURL =   "Data Source = (local); Initial Catalog = MedicalEncyclopedia; Integrated Security = True; MultipleActiveResultSets = True";
             SqlConnection conn1 = new SqlConnection(conURL1);
             conn1.Open();
-            String cmd1 = "SELECT * FROM Clo";
+            String cmd1 = "SELECT CloId , Id as RubricId , Details FROM Rubric";
             //SqlCommand cmd = new SqlCommand("SELECT * FROM Customer", conn);
             SqlCommand cmd = new SqlCommand(cmd1, conn1);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sda.Fill(dt);
+            this.dataGridView1.DataSource = dt;
+            this.dataGridView1.Sort(this.dataGridView1.Columns[0], ListSortDirection.Ascending);
+            foreach (DataGridViewColumn column in this.dataGridView1.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
+            this.dataGridView1.CellFormatting += dataGridView1_CellFormatting;
             conn1.Close();
-            dataGridView1.DataSource = dt;
+            //dataGridView1.DataSource = dt;
         }
         // Create Edit btn In datagridView
         public void Editbtn()
@@ -103,30 +122,17 @@ namespace CLOApp
             b1.UseColumnTextForButtonValue = true;
             dataGridView1.Columns.Add(b1);
         }
-
-        // Create Add rubrics btn in datagridview
-        public void AddRubricbtn()
+        // Add Rubric's Level's Button
+        public void AddRubriclvlbtn()
         {
             DataGridViewButtonColumn b1 = new DataGridViewButtonColumn();
-            b1.HeaderText = "Add Rubrics";
-            b1.Name = "Add_Rubrics";
-            b1.Text = "Add Rubrics";
+            b1.HeaderText = "Rubric'sLevel";
+            b1.Name = "AddRubric'sLevel";
+            b1.Text = "AddRubric'sLevel";
             b1.UseColumnTextForButtonValue = true;
             dataGridView1.Columns.Add(b1);
         }
-        private void ManageCLO_Load(object sender, EventArgs e)
-        {
-            Showdata();
-            Editbtn();
-            Deletebtn();
-            AddRubricbtn();
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ManageData f1 = new ManageData();
-            f1.Show();
-            this.Hide();
-        }
+
     }
 }
