@@ -28,8 +28,10 @@ C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.St
 C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.csproj.GenerateResource.Cache
 C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.CreateCLO.resources
 C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.Rubrics1.resources
-C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.RubricsLevel1.resources
 C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.RubricDetails.resources
 C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.EditClo.resources
 C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.Editrubric.resources
 C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.ManageData.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.AddRubricLevel.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.RubricLevelDetail.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.EditRubriclvl.resources

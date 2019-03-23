@@ -10,6 +10,7 @@ namespace CLOApp
     {
         public static int count;
         public static int rubricId;
+        public static int rubriclevelId;
         public static int Unid;
         public static int CLOid;
         public static string Details;

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddRubricLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRubricLevel.Designer.cs">
+      <DependentUpon>AddRubricLevel.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddStudents.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,12 @@
     <Compile Include="Editrubric.Designer.cs">
       <DependentUpon>Editrubric.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditRubriclvl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRubriclvl.Designer.cs">
+      <DependentUpon>EditRubriclvl.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditStdDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,17 +127,17 @@
     <Compile Include="RubricDetails.Designer.cs">
       <DependentUpon>RubricDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="RubricLevelDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RubricLevelDetail.Designer.cs">
+      <DependentUpon>RubricLevelDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Rubrics1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Rubrics1.Designer.cs">
       <DependentUpon>Rubrics1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RubricsLevel1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RubricsLevel1.Designer.cs">
-      <DependentUpon>RubricsLevel1.cs</DependentUpon>
     </Compile>
     <Compile Include="StudentsDetails.cs">
       <SubType>Form</SubType>
@@ -133,6 +145,9 @@
     <Compile Include="StudentsDetails.Designer.cs">
       <DependentUpon>StudentsDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddRubricLevel.resx">
+      <DependentUpon>AddRubricLevel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddStudents.resx">
       <DependentUpon>AddStudents.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Editrubric.resx">
       <DependentUpon>Editrubric.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRubriclvl.resx">
+      <DependentUpon>EditRubriclvl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditStdDetail.resx">
       <DependentUpon>EditStdDetail.cs</DependentUpon>
@@ -175,11 +193,11 @@
     <EmbeddedResource Include="RubricDetails.resx">
       <DependentUpon>RubricDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RubricLevelDetail.resx">
+      <DependentUpon>RubricLevelDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Rubrics1.resx">
       <DependentUpon>Rubrics1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RubricsLevel1.resx">
-      <DependentUpon>RubricsLevel1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentsDetails.resx">
       <DependentUpon>StudentsDetails.cs</DependentUpon>

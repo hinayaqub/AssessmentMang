@@ -54,7 +54,7 @@ namespace CLOApp
             }
             else if (e.ColumnIndex == 5)
             {
-                RubricsLevel1 r1 = new RubricsLevel1();
+             AddRubricLevel r1 = new AddRubricLevel();
                 r1.Show();
                 this.Hide();
             }

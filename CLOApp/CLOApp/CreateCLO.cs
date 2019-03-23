@@ -25,7 +25,7 @@ namespace CLOApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            RubricsLevel1 r1 = new RubricsLevel1();
+            Rubrics1 r1 = new Rubrics1();
             r1.Show();
            
         }
@@ -51,6 +51,11 @@ namespace CLOApp
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
