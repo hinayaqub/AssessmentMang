@@ -48,5 +48,19 @@ namespace CLOApp
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            StudentResult r1 = new StudentResult();
+            r1.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AddAssessment a1 = new AddAssessment();
+            a1.Show();
+            this.Hide();
+        }
     }
 }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAssessment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAssessment.Designer.cs">
+      <DependentUpon>AddAssessment.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddRubricLevel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="AddStudents.Designer.cs">
       <DependentUpon>AddStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssessCompo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssessCompo.Designer.cs">
+      <DependentUpon>AssessCompo.cs</DependentUpon>
     </Compile>
     <Compile Include="AttendenceDetail.cs">
       <SubType>Form</SubType>
@@ -75,6 +87,12 @@
     </Compile>
     <Compile Include="CreateAtte.Designer.cs">
       <DependentUpon>CreateAtte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editattend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editattend.Designer.cs">
+      <DependentUpon>Editattend.cs</DependentUpon>
     </Compile>
     <Compile Include="EditClo.cs">
       <SubType>Form</SubType>
@@ -139,17 +157,29 @@
     <Compile Include="Rubrics1.Designer.cs">
       <DependentUpon>Rubrics1.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentResult.Designer.cs">
+      <DependentUpon>StudentResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentsDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StudentsDetails.Designer.cs">
       <DependentUpon>StudentsDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddAssessment.resx">
+      <DependentUpon>AddAssessment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddRubricLevel.resx">
       <DependentUpon>AddRubricLevel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddStudents.resx">
       <DependentUpon>AddStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssessCompo.resx">
+      <DependentUpon>AssessCompo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AttendenceDetail.resx">
       <DependentUpon>AttendenceDetail.cs</DependentUpon>
@@ -159,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateAtte.resx">
       <DependentUpon>CreateAtte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editattend.resx">
+      <DependentUpon>Editattend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditClo.resx">
       <DependentUpon>EditClo.cs</DependentUpon>
@@ -198,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Rubrics1.resx">
       <DependentUpon>Rubrics1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentResult.resx">
+      <DependentUpon>StudentResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentsDetails.resx">
       <DependentUpon>StudentsDetails.cs</DependentUpon>

@@ -35,7 +35,7 @@ namespace CLOApp
             //String conURL =   "Data Source = (local); Initial Catalog = MedicalEncyclopedia; Integrated Security = True; MultipleActiveResultSets = True";
             SqlConnection conn1 = new SqlConnection(conURL1);
             conn1.Open();
-            String cmd1 = "SELECT RegistrationNumber FROM Student";
+            String cmd1 = "SELECT Id , RegistrationNumber FROM Student";
             //SqlCommand cmd = new SqlCommand("SELECT * FROM Customer", conn);
             SqlCommand cmd = new SqlCommand(cmd1, conn1);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
@@ -60,10 +60,10 @@ namespace CLOApp
             SqlConnection conn1 = new SqlConnection(conURL1);
             conn1.Open();
 
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            for (int i = 0; i < (dataGridView1.Rows.Count-1); i++)
             {
-                string att = (string)dataGridView1.Rows[i].Cells[0].Value;
-                string regno = (string)dataGridView1.Rows[i].Cells[1].Value;
+                string att = (string)dataGridView1.Rows[i].Cells[2].Value;
+                MyClass.regno = (int)dataGridView1.Rows[i].Cells[0].Value;
                 int j = 0;
                 if(att== "Present")
                 {
@@ -81,27 +81,71 @@ namespace CLOApp
                 {
                     j = 4;
                 }
-                String cmd1 = "insert into ClassAttendance values ('" + Convert.ToDateTime(dateTimePicker1.Text) + "')";
+
+                /// Attendence Id
+                String cmd1 = "SELECT TOP 1 Id FROM ClassAttendance ORDER BY Id DESC";
+                //SqlCommand cmd = new SqlCommand("SELECT * FROM Customer", conn);
                 SqlCommand cmd = new SqlCommand(cmd1, conn1);
-                cmd.ExecuteNonQuery();
+                SqlDataReader myReader;
+                myReader = cmd.ExecuteReader();
+                if (!myReader.Read())
+                {
+                    MessageBox.Show("NewValue is not found");
+                    return;
+                }
 
-                String cmd2 = "insert into StudentAttendance values ('" + Convert.ToDateTime(dateTimePicker1.Text) + "')";
+
+                try
+                {
+                   MyClass.attd= myReader.GetValue(0).ToString();
+                    cmd.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+                /// Student Id
+                String cmd2 = "Select Student.Id as StudentId From Student  Where Student.Id ="+MyClass.regno;
+                //SqlCommand cmd = new SqlCommand("SELECT * FROM Customer", conn);
                 SqlCommand cmd02 = new SqlCommand(cmd2, conn1);
-                cmd02.ExecuteNonQuery();
-
-
-
-                conn1.Close();
-                bool isCellChecked = (bool)dataGridView1.Rows[i].Cells[1].Value;
-                if (isCellChecked == true)
+                SqlDataReader myReader1;
+                myReader1 = cmd02.ExecuteReader();
+                if (!myReader1.Read())
                 {
-                    MessageBox.Show("Is Checked");
+                    MessageBox.Show("NewValue is not found");
+                    return;
                 }
-                else
+
+
+                try
                 {
-                    MessageBox.Show("Is Not Chiked");
+                    MyClass.std = myReader1.GetValue(0).ToString();
+                    cmd02.Dispose();
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                
+          
+
+                String cmd3 = "SET IDENTITY_INSERT StudentAttendance ON insert into StudentAttendance( AttendanceId ,  StudentId , AttendanceStatus) Values ('" +Convert.ToInt32(MyClass.attd) + "' , '" + Convert.ToInt32(MyClass.std)+ "' ,'"+j+"' ) SET IDENTITY_INSERT StudentAttendance OFF";
+                SqlCommand cmd03 = new SqlCommand(cmd3, conn1);
+                int n = cmd03.ExecuteNonQuery();
+                if (n != 0)
+                {
+                    MessageBox.Show(n + "Record Has Been Saved");
+                }
+
+
+
+
+                /*  String cmd2 = "insert into StudentAttendance StudentId Select Student ('" + Convert.ToDateTime(dateTimePicker1.Text) + "')";
+                  SqlCommand cmd02 = new SqlCommand(cmd2, conn1);
+                  cmd02.ExecuteNonQuery();*/
             }
+            conn1.Close();
         }
 
         // Function to Mark Attendence

@@ -11,82 +11,60 @@ using System.Windows.Forms;
 
 namespace CLOApp
 {
-    public partial class Editrubric : Form
+    public partial class AssessCompo : Form
     {
-        public Editrubric()
+        public AssessCompo()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Editrubric_Load(object sender, EventArgs e)
+        private void AssessCompo_Load(object sender, EventArgs e)
         {
-            EditData();
-        }
-        public void EditData()
-        {
-
             String conURL1 = "Data Source = DESKTOP-RPO4Q5R\\PARVEEN; Initial Catalog =ProjectB; User ID = mohsin; Password = mohsin123; MultipleActiveResultSets = True";
             //String conURL =   "Data Source = (local); Initial Catalog = MedicalEncyclopedia; Integrated Security = True; MultipleActiveResultSets = True";
             SqlConnection conn1 = new SqlConnection(conURL1);
             conn1.Open();
-
-            String cmd1 = "SELECT * FROM Rubric Where Rubric.Id = " + MyClass.rubricId;
+            String cmd1 = "SELECT Id From Rubric";
             //SqlCommand cmd = new SqlCommand("SELECT * FROM Customer", conn);
             SqlCommand cmd = new SqlCommand(cmd1, conn1);
-            SqlDataReader myReader;
-            myReader = cmd.ExecuteReader();
-            if (!myReader.Read())
+            SqlDataReader sda = cmd.ExecuteReader();
+            while (sda.Read())
             {
-                MessageBox.Show("NewValue is not found");
-                return;
+                comboBox2.Items.Add(sda[0]);
+
             }
-
-
-            try
-            {
-                richTextBox1.Text = myReader.GetValue(1).ToString();
-                cmd.Dispose();
-                conn1.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SaveData();
-            RubricDetails rd = new RubricDetails();
-            rd.Show();
-            this.Hide();
+            AddAssComp();
         }
-        public void SaveData()
+
+        public void AddAssComp()
+
         {
+
             String conURL1 = "Data Source = DESKTOP-RPO4Q5R\\PARVEEN; Initial Catalog = ProjectB ; User ID = mohsin; Password = mohsin123; MultipleActiveResultSets = True";
             SqlConnection conn1 = new SqlConnection(conURL1);
             conn1.Open();
-            
-            String cmd1 = "update Rubric set Details='" + richTextBox1.Text + "' Where  Rubric.Id = '" + MyClass.rubricId + "'";
+            String cmd1 = "insert into AssessmentComponent values ('" +comboBox1.Text + "','" +comboBox2.Text + "','" +comboBox3.Text + "','" +Convert.ToDateTime(dateTimePicker1.Text)+ "','" + Convert.ToDateTime(dateTimePicker1.Text) + "','" +MyClass.assess + "')";
 
             SqlCommand cmd = new SqlCommand(cmd1, conn1);
-            MessageBox.Show("Rubric has been Updated");
+            int i = cmd.ExecuteNonQuery();
+            conn1.Close();
+            if (i != 0)
+            {
+                MessageBox.Show(i + "Record Has Been Saved");
+            }
+        }
 
-            try
-            {
-                cmd.ExecuteReader();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex + " Record Has Been Updated ");
-            }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

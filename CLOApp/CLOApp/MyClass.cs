@@ -14,5 +14,11 @@ namespace CLOApp
         public static int Unid;
         public static int CLOid;
         public static string Details;
+        public static string attd;
+        public static string std;
+        public static int  regno;
+        public static int attdid;
+        public static int assess;
     }
 }
+
