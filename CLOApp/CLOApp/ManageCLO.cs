@@ -20,9 +20,7 @@ namespace CLOApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CreateCLO c1 = new CreateCLO();
-            c1.Show();
-            this.Hide();
+            Showdata();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -127,6 +125,68 @@ namespace CLOApp
             ManageData f1 = new ManageData();
             f1.Show();
             this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if ((comboBox1.Text != "") && (richTextBox1.Text != ""))
+            {
+                String conURL1 = "Data Source = DESKTOP-RPO4Q5R\\PARVEEN; Initial Catalog = ProjectB ; User ID = mohsin; Password = mohsin123; MultipleActiveResultSets = True";
+                SqlConnection conn1 = new SqlConnection(conURL1);
+                conn1.Open();
+                DateTime localDate = DateTime.Now;
+                String cmd1 = "insert into Clo values ('" + comboBox1.Text + "','" + localDate + "','" + localDate + "')";
+                MyClass.Details = richTextBox1.Text;
+                SqlCommand cmd = new SqlCommand(cmd1, conn1);
+                int i = cmd.ExecuteNonQuery();
+                conn1.Close();
+                if (i != 0)
+                {
+                    MessageBox.Show(i + "Record Has Been Saved");
+                }
+            }
+        }
+
+        private void comboBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox1.Text))
+            {
+                e.Cancel = true;
+                comboBox1.Focus();
+                errorProvider1.SetError(comboBox1, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(comboBox1, "");
+            }
+        }
+
+        private void richTextBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(richTextBox1.Text))
+            {
+                e.Cancel = true;
+                richTextBox1.Focus();
+                errorProvider1.SetError(richTextBox1, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(richTextBox1, "");
+            }
         }
     }
 }

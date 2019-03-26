@@ -63,10 +63,13 @@ namespace CLOApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SaveData();
-            RubricDetails rd = new RubricDetails();
-            rd.Show();
-            this.Hide();
+            if (richTextBox1.Text != "")
+            {
+                SaveData();
+                RubricDetails rd = new RubricDetails();
+                rd.Show();
+                this.Hide();
+            }
         }
         public void SaveData()
         {
@@ -88,6 +91,22 @@ namespace CLOApp
                 MessageBox.Show(ex + " Record Has Been Updated ");
             }
 
+        }
+
+        private void richTextBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(richTextBox1.Text))
+            {
+                e.Cancel = true;
+                richTextBox1.Focus();
+                errorProvider1.SetError(richTextBox1, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(richTextBox1, "");
+            }
         }
     }
 }

@@ -19,6 +19,12 @@ namespace CLOApp
         public static int  regno;
         public static int attdid;
         public static int assess;
+        public static string asscomp;
+        public static int assmcomp;
+        public static int Assstd;
+        public static int Assid;
+        public static int AssCompid;
+        public static int rubriclvl;
     }
 }
 

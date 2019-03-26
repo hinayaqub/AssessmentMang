@@ -35,15 +35,6 @@ namespace CLOApp
             String conURL1 = "Data Source = DESKTOP-RPO4Q5R\\PARVEEN; Initial Catalog = ProjectB ; User ID = mohsin; Password = mohsin123; MultipleActiveResultSets = True";
             SqlConnection conn1 = new SqlConnection(conURL1);
             conn1.Open();
-            int status;
-            if (comboBox1.Text == "Active")
-            {
-                status = 5;
-            }
-            else
-            {
-                status = 6;
-            }
             String cmd1 = "insert into Assessment values ('" + comboBox1.Text + "','" + Convert.ToDateTime(dateTimePicker1.Text)+ "','" + textBox1.Text + "','" +
             comboBox3.Text + "')";
 

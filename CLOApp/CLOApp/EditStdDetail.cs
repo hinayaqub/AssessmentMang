@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Text.RegularExpressions;
 namespace CLOApp
 {
     public partial class EditStdDetail : Form
@@ -77,40 +77,151 @@ namespace CLOApp
         // Edit Data of Student
         public void SaveData()
         {
-            String conURL1 = "Data Source = DESKTOP-RPO4Q5R\\PARVEEN; Initial Catalog = ProjectB ; User ID = mohsin; Password = mohsin123; MultipleActiveResultSets = True";
-            SqlConnection conn1 = new SqlConnection(conURL1);
-            conn1.Open();
-            int status = 0;
-            if (comboBox1.Text == "Active")
+            if ((textBox1.Text != "") && (textBox2.Text != "") && (textBox3.Text != "") && (textBox5.Text != "") && (textBox6.Text != "") && (comboBox1.Text != ""))
             {
-                status = 1;
+                String conURL1 = "Data Source = DESKTOP-RPO4Q5R\\PARVEEN; Initial Catalog = ProjectB ; User ID = mohsin; Password = mohsin123; MultipleActiveResultSets = True";
+                SqlConnection conn1 = new SqlConnection(conURL1);
+                conn1.Open();
+                int status = 0;
+                if (comboBox1.Text == "Active")
+                {
+                    status = 5;
+                }
+                else
+                {
+                    status = 6;
+                }
+                String cmd1 = "update Student set FirstName='" + textBox1.Text + "', LastName= '" + textBox2.Text + "', Contact= '" + textBox3.Text + "',Email='" +
+                textBox6.Text + "', RegistrationNumber='" + textBox5.Text + "',Status='" + status + "' Where  Student.Id = '" + MyClass.count + "'";
+
+                SqlCommand cmd = new SqlCommand(cmd1, conn1);
+                MessageBox.Show("The Record Of Studdent Has been updated");
+                try
+                {
+                    cmd.ExecuteReader();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex + " Record Has Been Updated ");
+                }
+                StudentsDetails d1 = new StudentsDetails();
+                d1.Show();
+                this.Hide();
+
             }
             else
             {
-                status = 0;
+                MessageBox.Show("All field should be field");
             }
-            String cmd1 = "update Student set FirstName='" + textBox1.Text + "', LastName= '" + textBox2.Text + "', Contact= '" + textBox3.Text + "',Email='" +
-            textBox6.Text + "', RegistrationNumber='" + textBox5.Text + "',Status='" + status + "' Where  Student.Id = '" + MyClass.count + "'";
-
-            SqlCommand cmd = new SqlCommand(cmd1, conn1);
-            MessageBox.Show("The Record Of Studdent Has been updated");
-            try
-            {
-                cmd.ExecuteReader();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex + " Record Has Been Updated ");
-            }
-            
         }
           
         private void button1_Click(object sender, EventArgs e)
         {
             SaveData();
-            StudentsDetails d1 = new StudentsDetails();
-            d1.Show();
-            this.Hide();
+          
+        }
+
+        private void textBox1_Validating(object sender, CancelEventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                e.Cancel = true;
+                textBox1.Focus();
+                errorProvider1.SetError(textBox1, "Name should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(textBox1, "");
+            }
+        }
+
+        private void textBox2_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                e.Cancel = true;
+                textBox2.Focus();
+                errorProvider1.SetError(textBox2, "Name should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(textBox2, "");
+            }
+        }
+
+        private void textBox3_Validating(object sender, CancelEventArgs e)
+        {
+            //int ContactNo = 0;
+
+            textBox3.MaxLength = 11;
+            //Regex re = new Regex("^9[0-9]{11}");
+            if (string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                e.Cancel = true;
+                textBox3.Focus();
+                errorProvider1.SetError(textBox3, "Contact Number should not be left blank!");
+                return;
+            }
+
+            else if (textBox3.Text.Length > 12)
+            {
+
+                textBox3.Focus();
+                errorProvider1.SetError(textBox3, "Contact Number conatin digits and  length is 11!");
+                
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(textBox3, "");
+
+            }
+
+
+        }
+
+        private void textBox6_Validating(object sender, CancelEventArgs e)
+        {
+            string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
+            if (Regex.IsMatch(textBox6.Text, pattern))
+            {
+                errorProvider1.Clear();
+            }
+            else
+            {
+                errorProvider1.SetError(this.textBox6, "Please Enter Valid Email");
+                return;
+            }
+        }
+
+        private void textBox5_Validating(object sender, CancelEventArgs e)
+        {
+            string pattern = "^([0-9]{4})([A-Z]{2})([0-9]{3})$";
+            if (Regex.IsMatch(textBox5.Text, pattern))
+            {
+                errorProvider1.Clear();
+            }
+            else
+            {
+                errorProvider1.SetError(this.textBox5, "Please Enter Registration Number In e.g. 2016CS352 Format");
+                return;
+            }
+        }
+
+        private void comboBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox1.Text))
+            {
+                e.Cancel = true;
+                textBox3.Focus();
+                errorProvider1.SetError(comboBox1, "Field should not be left blank!");
+                return;
+            }
         }
     }
 }

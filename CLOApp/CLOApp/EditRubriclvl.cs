@@ -20,10 +20,13 @@ namespace CLOApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SaveData();
-            RubricLevelDetail r1 = new RubricLevelDetail();
-            r1.Show();
-            this.Hide();
+            if (comboBox1.Text != "" && richTextBox1.Text != "")
+            {
+                SaveData();
+                RubricLevelDetail r1 = new RubricLevelDetail();
+                r1.Show();
+                this.Hide();
+            }
         }
 
         private void EditRubriclvl_Load(object sender, EventArgs e)
@@ -85,6 +88,38 @@ namespace CLOApp
                 MessageBox.Show(ex + " Record Has Been Updated ");
             }
 
+        }
+
+        private void richTextBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(richTextBox1.Text))
+            {
+                e.Cancel = true;
+                richTextBox1.Focus();
+                errorProvider1.SetError(richTextBox1, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(richTextBox1, "");
+            }
+        }
+
+        private void comboBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox1.Text))
+            {
+                e.Cancel = true;
+               comboBox1.Focus();
+                errorProvider1.SetError(comboBox1, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(comboBox1, "");
+            }
         }
     }
 }

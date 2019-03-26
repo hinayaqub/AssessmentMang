@@ -35,7 +35,11 @@ namespace CLOApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddRubricLevels();
+            if (comboBox1.Text != "" && comboBox2.Text != "" && comboBox3.Text != "" && comboBox4.Text != "" && richTextBox1.Text != "" &&
+                richTextBox2.Text != "" && richTextBox3.Text != "" && richTextBox4.Text != "")
+            {
+                AddRubricLevels();
+            }
         }
 
 
@@ -74,6 +78,139 @@ namespace CLOApp
             RubricLevelDetail r1 = new RubricLevelDetail();
             r1.Show();
             this.Hide();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(richTextBox1.Text))
+            {
+                e.Cancel = true;
+                richTextBox1.Focus();
+                errorProvider1.SetError(richTextBox1, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(richTextBox1, "");
+            }
+        }
+
+        private void comboBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox1.Text))
+            {
+                e.Cancel = true;
+                comboBox1.Focus();
+                errorProvider1.SetError(comboBox1, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(comboBox1, "");
+            }
+        }
+
+        private void richTextBox2_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(richTextBox2.Text))
+            {
+                e.Cancel = true;
+                richTextBox2.Focus();
+                errorProvider1.SetError(richTextBox2, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(richTextBox2, "");
+            }
+        }
+
+        private void comboBox2_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox2.Text))
+            {
+                e.Cancel = true;
+                comboBox2.Focus();
+                errorProvider1.SetError(comboBox2, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(comboBox2, "");
+            }
+        }
+
+        private void richTextBox3_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(richTextBox3.Text))
+            {
+                e.Cancel = true;
+                richTextBox3.Focus();
+                errorProvider1.SetError(richTextBox3, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(richTextBox3, "");
+            }
+        }
+
+        private void comboBox3_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox3.Text))
+            {
+                e.Cancel = true;
+                comboBox3.Focus();
+                errorProvider1.SetError(comboBox3, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(comboBox3, "");
+            }
+        }
+
+        private void richTextBox4_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(richTextBox4.Text))
+            {
+                e.Cancel = true;
+                richTextBox4.Focus();
+                errorProvider1.SetError(richTextBox4, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(richTextBox4, "");
+            }
+        }
+
+        private void comboBox4_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox4.Text))
+            {
+                e.Cancel = true;
+                comboBox4.Focus();
+                errorProvider1.SetError(comboBox4, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(comboBox4, "");
+            }
         }
     }
 }

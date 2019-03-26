@@ -42,7 +42,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.richTextBox1.Location = new System.Drawing.Point(279, 111);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(140, 48);
@@ -51,7 +51,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.comboBox1.BackColor = System.Drawing.SystemColors.HighlightText;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "CLO 1",

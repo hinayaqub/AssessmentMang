@@ -33,7 +33,7 @@ namespace CLOApp
             conn1.Open();
             DateTime localDate = DateTime.Now;
             DateTime Create = Convert.ToDateTime(dateTimePicker1.Text);
-            String cmd1 = "update Clo set Name='" + textBox1.Text + "', DateCreated= '" +Create + "', DateUpdated= '" + localDate+ "' Where  Clo.Id = '" + MyClass.CLOid + "'";
+            String cmd1 = "update Clo set Name='" + comboBox1.Text + "', DateCreated= '" +Create + "', DateUpdated= '" + localDate+ "' Where  Clo.Id = '" + MyClass.CLOid + "'";
 
             SqlCommand cmd = new SqlCommand(cmd1, conn1);
             MessageBox.Show("Clo has been updated");
@@ -76,7 +76,7 @@ namespace CLOApp
 
             try
             {
-                textBox1.Text = myReader.GetValue(1).ToString();
+                comboBox1.Text = myReader.GetValue(1).ToString();
                 dateTimePicker1.Value = Convert.ToDateTime(myReader.GetValue(2));
                
                 
@@ -95,7 +95,20 @@ namespace CLOApp
 
         }
 
-
-
+        private void comboBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox1.Text))
+            {
+                e.Cancel = true;
+                comboBox1.Focus();
+                errorProvider1.SetError(comboBox1, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(comboBox1, "");
+            }
+        }
     }
 }

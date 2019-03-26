@@ -38,3 +38,4 @@ C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.Ed
 C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.Editattend.resources
 C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.AddAssessment.resources
 C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.AssessCompo.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.StudentResult.resources
