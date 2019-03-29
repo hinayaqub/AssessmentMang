@@ -23,8 +23,10 @@ namespace CLOApp
             int index = e.RowIndex;
             DataGridViewRow selected_row = dataGridView1.Rows[index];
             string id = selected_row.Cells[0].Value.ToString();
+            string id1 = selected_row.Cells[1].Value.ToString();
             int x;
             Int32.TryParse(id, out x);
+            Int32.TryParse(id1, out MyClass.attstd);
             MyClass.attdid = x;
             if (e.ColumnIndex == 3)
             {
@@ -46,10 +48,11 @@ namespace CLOApp
 
                     String cmd1 = "Delete FROM StudentAttendance Where StudentAttendance.AttendanceId = " + MyClass.attdid;
                     //SqlCommand cmd = new SqlCommand("SELECT * FROM Customer", conn);
-                    SqlDataAdapter cmd = new SqlDataAdapter(cmd1, conn1);
+                    SqlDataAdapter cmd = new SqlDataAdapter(cmd1, conn1); 
                     cmd.SelectCommand.ExecuteNonQuery();
                     conn1.Close();
                     MessageBox.Show("Data Has been successfuly deleted");
+                    dataGridView1.Refresh();
                 }
             }
         }
@@ -75,6 +78,8 @@ namespace CLOApp
             sda.Fill(dt);
             conn1.Close();
             dataGridView1.DataSource = dt;
+           
+
         }
         // Create Edit btn In datagridView
         public void Editbtn()
@@ -99,7 +104,7 @@ namespace CLOApp
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            AddAttendence();
+                  AddAttendence();
             CreateAtte c = new CreateAtte();
             c.Show();
             this.Hide();
@@ -123,6 +128,11 @@ namespace CLOApp
             StudentsDetails s1 = new StudentsDetails();
 
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Showdata();
         }
     }
 }

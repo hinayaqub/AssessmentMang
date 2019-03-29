@@ -25,6 +25,9 @@ namespace CLOApp
         public static int Assid;
         public static int AssCompid;
         public static int rubriclvl;
+        public static int attstd;
+        public static int rubric;
+        public static int stdres;
     }
 }
 

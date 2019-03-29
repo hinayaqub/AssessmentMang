@@ -38,6 +38,54 @@ namespace CLOApp
             sda.Fill(dt);
             conn1.Close();
             dataGridView1.DataSource = dt;
+           
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveData();
+            MessageBox.Show("Data has been updated");
+            AttendenceDetail ad = new AttendenceDetail();
+            ad.Show();
+            this.Hide();
+
+        }
+        public void SaveData()
+        {
+            String conURL1 = "Data Source = DESKTOP-RPO4Q5R\\PARVEEN; Initial Catalog = ProjectB ; User ID = mohsin; Password = mohsin123; MultipleActiveResultSets = True";
+            
+            
+            using (SqlConnection conn1 = new SqlConnection(conURL1))
+            {
+                using (SqlCommand comm = new SqlCommand())
+
+                {
+                    conn1.Open();
+                    for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                    {
+
+                        String cmd1 = "update StudentAttendance set  AttendanceStatus= '" + dataGridView1.Rows[i].Cells["AttendanceStatus"].Value + "' Where  AttendanceId= '" + MyClass.attdid + "' AND StudentId = '"+dataGridView1.Rows[i].Cells["StudentId"].Value+"'";
+                        SqlCommand cmd = new SqlCommand(cmd1, conn1);
+                        try
+                        {
+                            cmd.ExecuteReader();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex + " Record Has Been Updated ");
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+
         }
     }
 }

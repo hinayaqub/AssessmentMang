@@ -133,6 +133,9 @@ namespace CLOApp
             dataGridView1.Columns.Add(b1);
         }
 
-
-    }
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
 }
+}
+        

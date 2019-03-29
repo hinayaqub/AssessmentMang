@@ -39,3 +39,10 @@ C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.Ed
 C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.AddAssessment.resources
 C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.AssessCompo.resources
 C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.StudentResult.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.Editassess.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.Editasscomp.resources
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\bin\Debug\itextsharp.dll
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\bin\Debug\itextsharp.pdfa.dll
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\bin\Debug\itextsharp.xtra.dll
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\bin\Debug\itextsharp.xml
+C:\Users\Ahmad\Documents\GitHub\AssessmentMang\CLOApp\CLOApp\obj\Debug\CLOApp.Editstdres.resources

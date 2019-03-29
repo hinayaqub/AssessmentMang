@@ -30,44 +30,7 @@ namespace CLOApp
 
         private void StudentResult_Load(object sender, EventArgs e)
         {
-            String conURL1 = "Data Source = DESKTOP-RPO4Q5R\\PARVEEN; Initial Catalog =ProjectB; User ID = mohsin; Password = mohsin123; MultipleActiveResultSets = True";
-            //String conURL =   "Data Source = (local); Initial Catalog = MedicalEncyclopedia; Integrated Security = True; MultipleActiveResultSets = True";
-            SqlConnection conn1 = new SqlConnection(conURL1);
-            conn1.Open();
-           
 
-            String cmd2 = "SELECT Details From RubricLevel";
-            //SqlCommand cmd = new SqlCommand("SELECT * FROM Customer", conn);
-            SqlCommand cmd02 = new SqlCommand(cmd2, conn1);
-            SqlDataReader sd = cmd02.ExecuteReader();
-            while (sd.Read())
-            {
-                comboBox3.Items.Add(sd[0]);
-
-            }
-
-            String cmd3 = "SELECT RegistrationNumber From Student";
-            //SqlCommand cmd = new SqlCommand("SELECT * FROM Customer", conn);
-            SqlCommand cmd03 = new SqlCommand(cmd3, conn1);
-            SqlDataReader nsd = cmd03.ExecuteReader();
-            while (nsd.Read())
-            {
-                comboBox1.Items.Add(nsd[0]);
-
-            }
-
-
-            String cmd4 = "SELECT Title From Assessment";
-            //SqlCommand cmd = new SqlCommand("SELECT * FROM Customer", conn);
-            SqlCommand cmd04 = new SqlCommand(cmd4, conn1);
-            SqlDataReader nad = cmd04.ExecuteReader();
-            while (nad.Read())
-            {
-                comboBox4.Items.Add(nad[0]);
-
-            }
-
-            conn1.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -88,7 +51,7 @@ namespace CLOApp
             String conURL1 = "Data Source = DESKTOP-RPO4Q5R\\PARVEEN; Initial Catalog = ProjectB ; User ID = mohsin; Password = mohsin123; MultipleActiveResultSets = True";
             SqlConnection conn1 = new SqlConnection(conURL1);
             conn1.Open();
-            String cmd1 = "insert into StudentResult values ('" + MyClass.Assstd+ "','" + MyClass.assmcomp + "','" +
+            String cmd1 = "insert into StudentResult values ('" + MyClass.Assstd+ "','" + MyClass.AssCompid + "','" +
             MyClass.rubriclvl + "','" + Convert.ToDateTime(dateTimePicker1.Text) + "')";
 
             SqlCommand cmd = new SqlCommand(cmd1, conn1);
@@ -294,6 +257,136 @@ namespace CLOApp
                 MessageBox.Show(ex.ToString());
             }
         }
-  
+
+        private void comboBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox1.Text))
+            {
+                e.Cancel = true;
+                comboBox1.Focus();
+                errorProvider1.SetError(comboBox1, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(comboBox1, "");
+            }
+        }
+
+        private void comboBox4_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox4.Text))
+            {
+                e.Cancel = true;
+                comboBox4.Focus();
+                errorProvider1.SetError(comboBox4, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(comboBox4, "");
+            }
+        }
+
+        private void comboBox2_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox2.Text))
+            {
+                e.Cancel = true;
+                comboBox2.Focus();
+                errorProvider1.SetError(comboBox2, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(comboBox2, "");
+            }
+        }
+
+        private void comboBox3_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox3.Text))
+            {
+                e.Cancel = true;
+                comboBox3.Focus();
+                errorProvider1.SetError(comboBox3, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(comboBox3, "");
+            }
+        }
+        // Create Edit btn In datagridView
+        public void Editbtn()
+        {
+            DataGridViewButtonColumn b1 = new DataGridViewButtonColumn();
+            b1.HeaderText = "Edit Data";
+            b1.Name = "Edit Data";
+            b1.Text = "Edit";
+            b1.UseColumnTextForButtonValue = true;
+            dataGridView1.Columns.Add(b1);
+        }
+
+        // Create Delete btn in datagridview
+        public void Deletebtn()
+        {
+            DataGridViewButtonColumn b1 = new DataGridViewButtonColumn();
+            b1.HeaderText = "Delete Data";
+            b1.Name = "Delete Data";
+            b1.Text = "Delete";
+            b1.UseColumnTextForButtonValue = true;
+            dataGridView1.Columns.Add(b1);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Showdata();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selected_row = dataGridView1.Rows[index];
+            string id = selected_row.Cells[0].Value.ToString();
+            int x;
+            Int32.TryParse(id, out x);
+            MyClass.stdres = x;
+            if (e.ColumnIndex == 4)
+            {
+                if (DialogResult.Yes == MessageBox.Show("Do you want to edit the row?", "", MessageBoxButtons.YesNo))
+                {
+                    EditStdDetail s2 = new EditStdDetail();
+                    s2.Show();
+                    this.Hide();
+                }
+            }
+            else if (e.ColumnIndex == 5)
+            {
+                if (DialogResult.Yes == MessageBox.Show("Do you want to delete the row?", "", MessageBoxButtons.YesNo))
+                {
+                    String conURL1 = "Data Source = DESKTOP-RPO4Q5R\\PARVEEN; Initial Catalog =ProjectB; User ID = mohsin; Password = mohsin123; MultipleActiveResultSets = True";
+                    //String conURL =   "Data Source = (local); Initial Catalog = MedicalEncyclopedia; Integrated Security = True; MultipleActiveResultSets = True";
+                    SqlConnection conn1 = new SqlConnection(conURL1);
+                    conn1.Open();
+
+                    String cmd1 = "Delete FROM StudentResult Where StudentId = " + MyClass.stdres;
+                    //SqlCommand cmd = new SqlCommand("SELECT * FROM Customer", conn);
+                    SqlDataAdapter cmd = new SqlDataAdapter(cmd1, conn1);
+                    cmd.SelectCommand.ExecuteNonQuery();
+                    conn1.Close();
+                    MessageBox.Show("Data Has been successfuly deleted");
+                }
+            }
+        }
+
+        private void re(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,28 +31,27 @@ namespace CLOApp
         public void AddAssesm()
 
         {
-
-            String conURL1 = "Data Source = DESKTOP-RPO4Q5R\\PARVEEN; Initial Catalog = ProjectB ; User ID = mohsin; Password = mohsin123; MultipleActiveResultSets = True";
-            SqlConnection conn1 = new SqlConnection(conURL1);
-            conn1.Open();
-            String cmd1 = "insert into Assessment values ('" + comboBox1.Text + "','" + Convert.ToDateTime(dateTimePicker1.Text)+ "','" + textBox1.Text + "','" +
-            comboBox3.Text + "')";
-
-            SqlCommand cmd = new SqlCommand(cmd1, conn1);
-            int i = cmd.ExecuteNonQuery();
-            conn1.Close();
-            if (i != 0)
+            if (comboBox1.Text != "" && comboBox3.Text != "" && textBox1.Text != "")
             {
-                MessageBox.Show(i + "Record Has Been Saved");
+                String conURL1 = "Data Source = DESKTOP-RPO4Q5R\\PARVEEN; Initial Catalog = ProjectB ; User ID = mohsin; Password = mohsin123; MultipleActiveResultSets = True";
+                SqlConnection conn1 = new SqlConnection(conURL1);
+                conn1.Open();
+                String cmd1 = "insert into Assessment values ('" + comboBox1.Text + "','" + Convert.ToDateTime(dateTimePicker1.Text) + "','" + textBox1.Text + "','" +
+                comboBox3.Text + "')";
+
+                SqlCommand cmd = new SqlCommand(cmd1, conn1);
+                int i = cmd.ExecuteNonQuery();
+                conn1.Close();
+                if (i != 0)
+                {
+                    MessageBox.Show(i + "Record Has Been Saved");
+                }
             }
-            StudentsDetails s1 = new StudentsDetails();
-            s1.Show();
-            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Showdata();
         }
 
         private void AddAssessment_Load(object sender, EventArgs e)
@@ -121,8 +120,8 @@ namespace CLOApp
             {
                 if (DialogResult.Yes == MessageBox.Show("Do you want to edit the row?", "", MessageBoxButtons.YesNo))
                 {
-                    Editrubric cl = new Editrubric();
-                    cl.Show();
+                    Editassess c1 = new Editassess();
+                    c1.Show();
                     this.Hide();
                 }
             }
@@ -148,6 +147,54 @@ namespace CLOApp
                 AssessCompo r1 = new AssessCompo();
                 r1.Show();
                 this.Hide();
+            }
+        }
+
+        private void comboBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox1.Text))
+            {
+                e.Cancel = true;
+                comboBox1.Focus();
+                errorProvider1.SetError(comboBox1, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(comboBox1, "");
+            }
+        }
+
+        private void textBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                e.Cancel = true;
+                textBox1.Focus();
+                errorProvider1.SetError(textBox1, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(textBox1, "");
+            }
+        }
+
+        private void comboBox3_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox3.Text))
+            {
+                e.Cancel = true;
+                comboBox3.Focus();
+                errorProvider1.SetError(comboBox3, "Field should not be left blank!");
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(comboBox3, "");
             }
         }
     }

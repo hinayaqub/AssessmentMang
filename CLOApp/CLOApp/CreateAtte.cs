@@ -133,10 +133,7 @@ namespace CLOApp
                 String cmd3 = "SET IDENTITY_INSERT StudentAttendance ON insert into StudentAttendance( AttendanceId ,  StudentId , AttendanceStatus) Values ('" +Convert.ToInt32(MyClass.attd) + "' , '" + Convert.ToInt32(MyClass.std)+ "' ,'"+j+"' ) SET IDENTITY_INSERT StudentAttendance OFF";
                 SqlCommand cmd03 = new SqlCommand(cmd3, conn1);
                 int n = cmd03.ExecuteNonQuery();
-                if (n != 0)
-                {
-                    MessageBox.Show(n + "Record Has Been Saved");
-                }
+               
 
 
 
@@ -145,31 +142,45 @@ namespace CLOApp
                   SqlCommand cmd02 = new SqlCommand(cmd2, conn1);
                   cmd02.ExecuteNonQuery();*/
             }
+            MessageBox.Show("Data has been updated");
             conn1.Close();
+
+            AttendenceDetail ad = new AttendenceDetail();
+            ad.Show();
+            this.Hide();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AttendenceDetail ad = new AttendenceDetail();
+            ad.Show();
+            this.Hide();
+           
         }
 
         // Function to Mark Attendence
-       /* public void MarkAttendence()
+        /* public void MarkAttendence()
 
-        {
+         {
 
-            String conURL1 = "Data Source = DESKTOP-RPO4Q5R\\PARVEEN; Initial Catalog = ProjectB ; User ID = mohsin; Password = mohsin123; MultipleActiveResultSets = True";
-            SqlConnection conn1 = new SqlConnection(conURL1);
-            conn1.Open();
-            
-            String cmd1 = "insert into Student values ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" +
-            textBox6.Text + "','" + textBox5.Text + "','" + status + "')";
+             String conURL1 = "Data Source = DESKTOP-RPO4Q5R\\PARVEEN; Initial Catalog = ProjectB ; User ID = mohsin; Password = mohsin123; MultipleActiveResultSets = True";
+             SqlConnection conn1 = new SqlConnection(conURL1);
+             conn1.Open();
 
-            SqlCommand cmd = new SqlCommand(cmd1, conn1);
-            int i = cmd.ExecuteNonQuery();
-            conn1.Close();
-            if (i != 0)
-            {
-                MessageBox.Show(i + "Record Has Been Saved");
-            }
-            StudentsDetails s1 = new StudentsDetails();
-            s1.Show();
-            this.Hide();
-        }*/
+             String cmd1 = "insert into Student values ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" +
+             textBox6.Text + "','" + textBox5.Text + "','" + status + "')";
+
+             SqlCommand cmd = new SqlCommand(cmd1, conn1);
+             int i = cmd.ExecuteNonQuery();
+             conn1.Close();
+             if (i != 0)
+             {
+                 MessageBox.Show(i + "Record Has Been Saved");
+             }
+             StudentsDetails s1 = new StudentsDetails();
+             s1.Show();
+             this.Hide();
+         }*/
     }
 }

@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>.\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>.\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>.\itextsharp.xtra.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -88,6 +97,18 @@
     <Compile Include="CreateAtte.Designer.cs">
       <DependentUpon>CreateAtte.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editasscomp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editasscomp.Designer.cs">
+      <DependentUpon>Editasscomp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editassess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editassess.Designer.cs">
+      <DependentUpon>Editassess.cs</DependentUpon>
+    </Compile>
     <Compile Include="Editattend.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +138,12 @@
     </Compile>
     <Compile Include="EditStdDetail.Designer.cs">
       <DependentUpon>EditStdDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editstdres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editstdres.Designer.cs">
+      <DependentUpon>Editstdres.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageData.cs">
       <SubType>Form</SubType>
@@ -190,6 +217,12 @@
     <EmbeddedResource Include="CreateAtte.resx">
       <DependentUpon>CreateAtte.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Editasscomp.resx">
+      <DependentUpon>Editasscomp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editassess.resx">
+      <DependentUpon>Editassess.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Editattend.resx">
       <DependentUpon>Editattend.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditStdDetail.resx">
       <DependentUpon>EditStdDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editstdres.resx">
+      <DependentUpon>Editstdres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageData.resx">
       <DependentUpon>ManageData.cs</DependentUpon>
