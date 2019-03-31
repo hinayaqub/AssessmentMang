@@ -27,7 +27,10 @@ namespace CLOApp
         public static int rubriclvl;
         public static int attstd;
         public static int rubric;
-        public static int stdres;
+        public static int stdres = 0 ;
+        public static int RubricId = 0;
+        public static int deleAssId = 0;
+        public static int delRubriclvl = 0;
     }
 }
 

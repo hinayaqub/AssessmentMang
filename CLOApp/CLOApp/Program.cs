@@ -16,7 +16,7 @@ namespace CLOApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManageData());
+            Application.Run(new frmStudentMangForm());
         }
     }
 }

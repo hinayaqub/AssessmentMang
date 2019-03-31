@@ -55,200 +55,239 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddAssessment.cs">
+    <Compile Include="Assessment.cs" />
+    <Compile Include="AssessmentComponent.cs" />
+    <Compile Include="ClassAttendence.cs" />
+    <Compile Include="CLO.cs" />
+    <Compile Include="frmAddAssessment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddAssessment.Designer.cs">
-      <DependentUpon>AddAssessment.cs</DependentUpon>
+    <Compile Include="frmAddAssessment.Designer.cs">
+      <DependentUpon>frmAddAssessment.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddRubricLevel.cs">
+    <Compile Include="frmAddRubricLevel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddRubricLevel.Designer.cs">
-      <DependentUpon>AddRubricLevel.cs</DependentUpon>
+    <Compile Include="frmAddRubricLevel.Designer.cs">
+      <DependentUpon>frmAddRubricLevel.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddStudents.cs">
+    <Compile Include="frmAddStudents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStudents.Designer.cs">
-      <DependentUpon>AddStudents.cs</DependentUpon>
+    <Compile Include="frmAddStudents.Designer.cs">
+      <DependentUpon>frmAddStudents.cs</DependentUpon>
     </Compile>
-    <Compile Include="AssessCompo.cs">
+    <Compile Include="frmAssessComponent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AssessCompo.Designer.cs">
-      <DependentUpon>AssessCompo.cs</DependentUpon>
+    <Compile Include="frmAssessComponent.Designer.cs">
+      <DependentUpon>frmAssessComponent.cs</DependentUpon>
     </Compile>
-    <Compile Include="AttendenceDetail.cs">
+    <Compile Include="frmAssessmentReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AttendenceDetail.Designer.cs">
-      <DependentUpon>AttendenceDetail.cs</DependentUpon>
+    <Compile Include="frmAssessmentReport.Designer.cs">
+      <DependentUpon>frmAssessmentReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="CLODetails.cs">
+    <Compile Include="frmAttendenceDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CLODetails.Designer.cs">
-      <DependentUpon>CLODetails.cs</DependentUpon>
+    <Compile Include="frmAttendenceDetail.Designer.cs">
+      <DependentUpon>frmAttendenceDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateAtte.cs">
+    <Compile Include="frmCLODetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateAtte.Designer.cs">
-      <DependentUpon>CreateAtte.cs</DependentUpon>
+    <Compile Include="frmCLODetails.Designer.cs">
+      <DependentUpon>frmCLODetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Editasscomp.cs">
+    <Compile Include="frmAddAttendence.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Editasscomp.Designer.cs">
-      <DependentUpon>Editasscomp.cs</DependentUpon>
+    <Compile Include="frmAddAttendence.Designer.cs">
+      <DependentUpon>frmAddAttendence.cs</DependentUpon>
     </Compile>
-    <Compile Include="Editassess.cs">
+    <Compile Include="frmCLOReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Editassess.Designer.cs">
-      <DependentUpon>Editassess.cs</DependentUpon>
+    <Compile Include="frmCLOReport.Designer.cs">
+      <DependentUpon>frmCLOReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Editattend.cs">
+    <Compile Include="frmEditAssComp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Editattend.Designer.cs">
-      <DependentUpon>Editattend.cs</DependentUpon>
+    <Compile Include="frmEditAssComp.Designer.cs">
+      <DependentUpon>frmEditAssComp.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditClo.cs">
+    <Compile Include="frmEditAssess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditClo.Designer.cs">
-      <DependentUpon>EditClo.cs</DependentUpon>
+    <Compile Include="frmEditAssess.Designer.cs">
+      <DependentUpon>frmEditAssess.cs</DependentUpon>
     </Compile>
-    <Compile Include="Editrubric.cs">
+    <Compile Include="frmEditAttend.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Editrubric.Designer.cs">
-      <DependentUpon>Editrubric.cs</DependentUpon>
+    <Compile Include="frmEditAttend.Designer.cs">
+      <DependentUpon>frmEditAttend.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditRubriclvl.cs">
+    <Compile Include="frmEditClo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditRubriclvl.Designer.cs">
-      <DependentUpon>EditRubriclvl.cs</DependentUpon>
+    <Compile Include="frmEditClo.Designer.cs">
+      <DependentUpon>frmEditClo.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditStdDetail.cs">
+    <Compile Include="frmEditRubric.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditStdDetail.Designer.cs">
-      <DependentUpon>EditStdDetail.cs</DependentUpon>
+    <Compile Include="frmEditRubric.Designer.cs">
+      <DependentUpon>frmEditRubric.cs</DependentUpon>
     </Compile>
-    <Compile Include="Editstdres.cs">
+    <Compile Include="frmEditRubricLvl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Editstdres.Designer.cs">
-      <DependentUpon>Editstdres.cs</DependentUpon>
+    <Compile Include="frmEditRubricLvl.Designer.cs">
+      <DependentUpon>frmEditRubricLvl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageData.cs">
+    <Compile Include="frmEditStdDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageData.Designer.cs">
-      <DependentUpon>ManageData.cs</DependentUpon>
+    <Compile Include="frmEditStdDetail.Designer.cs">
+      <DependentUpon>frmEditStdDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateCLO.cs">
+    <Compile Include="frmEditStdResult.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateCLO.Designer.cs">
-      <DependentUpon>CreateCLO.cs</DependentUpon>
+    <Compile Include="frmEditStdResult.Designer.cs">
+      <DependentUpon>frmEditStdResult.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageCLO.cs">
+    <Compile Include="frmManageData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageCLO.Designer.cs">
-      <DependentUpon>ManageCLO.cs</DependentUpon>
+    <Compile Include="frmManageData.Designer.cs">
+      <DependentUpon>frmManageData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddCLO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCLO.Designer.cs">
+      <DependentUpon>frmAddCLO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageCLO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageCLO.Designer.cs">
+      <DependentUpon>frmManageCLO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
     </Compile>
     <Compile Include="MyClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RubricDetails.cs">
+    <Compile Include="frmRubricDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RubricDetails.Designer.cs">
-      <DependentUpon>RubricDetails.cs</DependentUpon>
+    <Compile Include="frmRubricDetails.Designer.cs">
+      <DependentUpon>frmRubricDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="RubricLevelDetail.cs">
+    <Compile Include="frmRubricLevelDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RubricLevelDetail.Designer.cs">
-      <DependentUpon>RubricLevelDetail.cs</DependentUpon>
+    <Compile Include="frmRubricLevelDetail.Designer.cs">
+      <DependentUpon>frmRubricLevelDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Rubrics1.cs">
+    <Compile Include="frmRubrics1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Rubrics1.Designer.cs">
-      <DependentUpon>Rubrics1.cs</DependentUpon>
+    <Compile Include="frmRubrics1.Designer.cs">
+      <DependentUpon>frmRubrics1.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentResult.cs">
+    <Compile Include="frmStudentMangForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentResult.Designer.cs">
-      <DependentUpon>StudentResult.cs</DependentUpon>
+    <Compile Include="frmStudentMangForm.Designer.cs">
+      <DependentUpon>frmStudentMangForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentsDetails.cs">
+    <Compile Include="frmStudentResult.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentsDetails.Designer.cs">
-      <DependentUpon>StudentsDetails.cs</DependentUpon>
+    <Compile Include="frmStudentResult.Designer.cs">
+      <DependentUpon>frmStudentResult.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddAssessment.resx">
-      <DependentUpon>AddAssessment.cs</DependentUpon>
+    <Compile Include="frmStudentsDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentsDetails.Designer.cs">
+      <DependentUpon>frmStudentsDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentInfo.cs" />
+    <Compile Include="StudentResult.cs" />
+    <EmbeddedResource Include="frmAddAssessment.resx">
+      <DependentUpon>frmAddAssessment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddRubricLevel.resx">
-      <DependentUpon>AddRubricLevel.cs</DependentUpon>
+    <EmbeddedResource Include="frmAddRubricLevel.resx">
+      <DependentUpon>frmAddRubricLevel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddStudents.resx">
-      <DependentUpon>AddStudents.cs</DependentUpon>
+    <EmbeddedResource Include="frmAddStudents.resx">
+      <DependentUpon>frmAddStudents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AssessCompo.resx">
-      <DependentUpon>AssessCompo.cs</DependentUpon>
+    <EmbeddedResource Include="frmAssessComponent.resx">
+      <DependentUpon>frmAssessComponent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AttendenceDetail.resx">
-      <DependentUpon>AttendenceDetail.cs</DependentUpon>
+    <EmbeddedResource Include="frmAssessmentReport.resx">
+      <DependentUpon>frmAssessmentReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CLODetails.resx">
-      <DependentUpon>CLODetails.cs</DependentUpon>
+    <EmbeddedResource Include="frmAttendenceDetail.resx">
+      <DependentUpon>frmAttendenceDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateAtte.resx">
-      <DependentUpon>CreateAtte.cs</DependentUpon>
+    <EmbeddedResource Include="frmCLODetails.resx">
+      <DependentUpon>frmCLODetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Editasscomp.resx">
-      <DependentUpon>Editasscomp.cs</DependentUpon>
+    <EmbeddedResource Include="frmAddAttendence.resx">
+      <DependentUpon>frmAddAttendence.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Editassess.resx">
-      <DependentUpon>Editassess.cs</DependentUpon>
+    <EmbeddedResource Include="frmCLOReport.resx">
+      <DependentUpon>frmCLOReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Editattend.resx">
-      <DependentUpon>Editattend.cs</DependentUpon>
+    <EmbeddedResource Include="frmEditAssComp.resx">
+      <DependentUpon>frmEditAssComp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditClo.resx">
-      <DependentUpon>EditClo.cs</DependentUpon>
+    <EmbeddedResource Include="frmEditAssess.resx">
+      <DependentUpon>frmEditAssess.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Editrubric.resx">
-      <DependentUpon>Editrubric.cs</DependentUpon>
+    <EmbeddedResource Include="frmEditAttend.resx">
+      <DependentUpon>frmEditAttend.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditRubriclvl.resx">
-      <DependentUpon>EditRubriclvl.cs</DependentUpon>
+    <EmbeddedResource Include="frmEditClo.resx">
+      <DependentUpon>frmEditClo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditStdDetail.resx">
-      <DependentUpon>EditStdDetail.cs</DependentUpon>
+    <EmbeddedResource Include="frmEditRubric.resx">
+      <DependentUpon>frmEditRubric.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Editstdres.resx">
-      <DependentUpon>Editstdres.cs</DependentUpon>
+    <EmbeddedResource Include="frmEditRubricLvl.resx">
+      <DependentUpon>frmEditRubricLvl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageData.resx">
-      <DependentUpon>ManageData.cs</DependentUpon>
+    <EmbeddedResource Include="frmEditStdDetail.resx">
+      <DependentUpon>frmEditStdDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateCLO.resx">
-      <DependentUpon>CreateCLO.cs</DependentUpon>
+    <EmbeddedResource Include="frmEditStdResult.resx">
+      <DependentUpon>frmEditStdResult.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageCLO.resx">
-      <DependentUpon>ManageCLO.cs</DependentUpon>
+    <EmbeddedResource Include="frmManageData.resx">
+      <DependentUpon>frmManageData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddCLO.resx">
+      <DependentUpon>frmAddCLO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageCLO.resx">
+      <DependentUpon>frmManageCLO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -258,21 +297,25 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RubricDetails.resx">
-      <DependentUpon>RubricDetails.cs</DependentUpon>
+    <EmbeddedResource Include="frmRubricDetails.resx">
+      <DependentUpon>frmRubricDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RubricLevelDetail.resx">
-      <DependentUpon>RubricLevelDetail.cs</DependentUpon>
+    <EmbeddedResource Include="frmRubricLevelDetail.resx">
+      <DependentUpon>frmRubricLevelDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Rubrics1.resx">
-      <DependentUpon>Rubrics1.cs</DependentUpon>
+    <EmbeddedResource Include="frmRubrics1.resx">
+      <DependentUpon>frmRubrics1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentResult.resx">
-      <DependentUpon>StudentResult.cs</DependentUpon>
+    <EmbeddedResource Include="frmStudentMangForm.resx">
+      <DependentUpon>frmStudentMangForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentsDetails.resx">
-      <DependentUpon>StudentsDetails.cs</DependentUpon>
+    <EmbeddedResource Include="frmStudentResult.resx">
+      <DependentUpon>frmStudentResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentsDetails.resx">
+      <DependentUpon>frmStudentsDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -286,6 +329,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
