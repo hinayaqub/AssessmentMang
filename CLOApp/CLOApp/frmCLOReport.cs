@@ -97,13 +97,69 @@ namespace CLOApp
             //String conURL =   "Data Source = (local); Initial Catalog = MedicalEncyclopedia; Integrated Security = True; MultipleActiveResultSets = True";
             SqlConnection conn1 = new SqlConnection(conURL1);
             conn1.Open();
-            String cmd1 = "SELECT RegistrationNumber , FirstName , Clo.Name As CLO , Rubric.Details , MeasurementLevel As [Obtained Marks] FROM((((((StudentResult INNER JOIN  AssessmentComponent ON AssessmentComponentId = AssessmentComponent.Id) INNER JOIN  RubricLevel ON RubricMeasurementId = RubricLevel.Id) INNER JOIN  Rubric ON AssessmentComponent.RubricId = Rubric.Id) INNER JOIN  Assessment ON AssessmentComponent.AssessmentId = Assessment.Id) INNER JOIN  Student ON StudentResult.StudentId = Student.Id) INNER JOIN  Clo ON Clo.Id = Rubric.CloId); ";
+           /* int[] rubricarr;
+            int[] Maxrubriclvlarra;
+
+            String MaxRubriclvl = "SELECT Id As RubricId, Max(MeasurementLevel)As MaxRubricLevel GROUP BY RubricLevel.Id";
+            SqlCommand sqlcmd = new SqlCommand(MaxRubriclvl, conn1);
+            SqlDataReader myReader;
+            myReader = sqlcmd.ExecuteReader();
+            if (!myReader.Read())
+            {
+                MessageBox.Show("NewValue is not found");
+                return;
+            }*/
+
+
+
+
+
+            String cmd1 = "SELECT StudentId , Clo.Name , AssessmentComponent.RubricId , StudentResult.RubricMeasurementId  As RubricLevelId ,  RubricLevel.MeasurementLevel , AssessmentComponent.TotalMarks As ComponentMarks FROM((((((StudentResult INNER JOIN  AssessmentComponent ON AssessmentComponentId = AssessmentComponent.Id) INNER JOIN  RubricLevel ON RubricMeasurementId = RubricLevel.Id) INNER JOIN  Rubric ON AssessmentComponent.RubricId = Rubric.Id) INNER JOIN  Assessment ON AssessmentComponent.AssessmentId = Assessment.Id) INNER JOIN  Student ON StudentResult.StudentId = Student.Id) INNER JOIN  Clo ON Clo.Id = Rubric.CloId); ";
             SqlCommand cmd = new SqlCommand(cmd1, conn1);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
+            int rubricMarks = 0;
+            int ComponentMarks = 0;
+            int ObtainedMarks = 0;
+            int l = dataGridView1.Rows.Count;
+            for (int h = 0; h < (l - 2); h++)
+            {
+                
+                    rubricMarks= Convert.ToInt32(dataGridView1.Rows[h].Cells["MeasurementLevel"].Value );
+                    ComponentMarks = Convert.ToInt32(dataGridView1.Rows[h].Cells["ComponentMarks"].Value) ;
+                    ObtainedMarks = (rubricMarks * ComponentMarks) / 10;
+                    dataGridView1.Rows[h].Cells["MeasurementLevel"].Value = ObtainedMarks;
+
+
+                
+            }
+            String newdata = "WITH	USACusts	AS ( SELECT StudentId, Clo.Name , AssessmentComponent.RubricId , RegistrationNumber ,  StudentResult.RubricMeasurementId As RubricLevelId ,  RubricLevel.MeasurementLevel , AssessmentComponent.TotalMarks As ComponentMarks FROM((((((StudentResult INNER JOIN  AssessmentComponent ON AssessmentComponentId = AssessmentComponent.Id)  INNER JOIN  RubricLevel ON RubricMeasurementId = RubricLevel.Id) INNER JOIN  Rubric ON AssessmentComponent.RubricId = Rubric.Id) INNER JOIN  Assessment ON AssessmentComponent.AssessmentId = Assessment.Id) INNER JOIN  Student ON StudentResult.StudentId = Student.Id) INNER JOIN  Clo ON Clo.Id = Rubric.CloId)) SELECT Name, StudentId, RegistrationNumber, SUM(ComponentMarks)As TotalMarks, SUM(MeasurementLevel) As[Obtained Marks] FROM USACusts GROUP BY Name, StudentId, RegistrationNumber;";
+            SqlCommand sqlcmd = new SqlCommand(newdata, conn1);
+            SqlDataAdapter sd = new SqlDataAdapter(sqlcmd);
+            DataTable dta = new DataTable();
+            sd.Fill(dta);
+            dataGridView1.DataSource = dta;
+
             conn1.Close();
+        }
+
+       /* public void Editbtn()
+        {
+           DataGridTextBoxColumn ObtainMarksColumn = new DataGridTextBoxColumn();
+            ObtainMarksColumn.HeaderText = "ObtainedMarks";
+            
+           
+            dataGridView1.Columns.Add
+        }*/
+
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmReports report = new frmReports();
+            report.Show();
+            this.Hide();
         }
     }
 }

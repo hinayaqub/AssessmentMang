@@ -232,6 +232,9 @@ namespace CLOApp
             this.Hide();
         }
 
-        
+        private void txtTotalMarks_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

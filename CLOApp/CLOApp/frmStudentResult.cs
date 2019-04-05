@@ -439,5 +439,12 @@ namespace CLOApp
         {
 
         }
+
+        private void Backbtn_Click(object sender, EventArgs e)
+        {
+            frmStudentMangForm stdmang = new frmStudentMangForm();
+            stdmang.Show();
+            this.Hide();
+        }
     }
 }

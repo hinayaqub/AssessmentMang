@@ -30,5 +30,12 @@ namespace CLOApp
             cloreport.Show();
             this.Hide();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmStudentMangForm stdmang = new frmStudentMangForm();
+            stdmang.Show();
+            this.Hide();
+        }
     }
 }

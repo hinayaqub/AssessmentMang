@@ -37,18 +37,19 @@
             this.pnlStudentResult = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.cboStdId = new System.Windows.Forms.ComboBox();
-            this.lblStdId = new System.Windows.Forms.Label();
-            this.cboAssessment = new System.Windows.Forms.ComboBox();
-            this.lblAssess = new System.Windows.Forms.Label();
-            this.cboAssessComp = new System.Windows.Forms.ComboBox();
-            this.lblAssessComp = new System.Windows.Forms.Label();
-            this.cboRubriclvl = new System.Windows.Forms.ComboBox();
-            this.lblRubriclvl = new System.Windows.Forms.Label();
-            this.lblEvalDate = new System.Windows.Forms.Label();
             this.dtpDateEval = new System.Windows.Forms.DateTimePicker();
+            this.lblEvalDate = new System.Windows.Forms.Label();
+            this.cboAssessComp = new System.Windows.Forms.ComboBox();
+            this.lblRubriclvl = new System.Windows.Forms.Label();
+            this.cboAssessment = new System.Windows.Forms.ComboBox();
+            this.lblAssessComp = new System.Windows.Forms.Label();
+            this.cboStdId = new System.Windows.Forms.ComboBox();
+            this.lblAssess = new System.Windows.Forms.Label();
+            this.lblStdId = new System.Windows.Forms.Label();
+            this.cboRubriclvl = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.lblInfo = new System.Windows.Forms.Label();
+            this.Backbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStdres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.pnlStudentResult.SuspendLayout();
@@ -76,7 +77,7 @@
             this.dgvStdres.BackgroundColor = System.Drawing.Color.Teal;
             this.dgvStdres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStdres.GridColor = System.Drawing.Color.Teal;
-            this.dgvStdres.Location = new System.Drawing.Point(35, 312);
+            this.dgvStdres.Location = new System.Drawing.Point(41, 314);
             this.dgvStdres.Name = "dgvStdres";
             this.dgvStdres.Size = new System.Drawing.Size(525, 188);
             this.dgvStdres.TabIndex = 10;
@@ -126,7 +127,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.1791F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.8209F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
             this.tableLayoutPanel1.Controls.Add(this.dtpDateEval, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblEvalDate, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.cboAssessComp, 1, 1);
@@ -147,103 +148,14 @@
             this.tableLayoutPanel1.TabIndex = 15;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // cboStdId
+            // dtpDateEval
             // 
-            this.cboStdId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtpDateEval.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboStdId.FormattingEnabled = true;
-            this.cboStdId.Location = new System.Drawing.Point(101, 3);
-            this.cboStdId.Name = "cboStdId";
-            this.cboStdId.Size = new System.Drawing.Size(146, 21);
-            this.cboStdId.TabIndex = 6;
-            this.cboStdId.Validating += new System.ComponentModel.CancelEventHandler(this.cboStdId_Validating);
-            // 
-            // lblStdId
-            // 
-            this.lblStdId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblStdId.AutoSize = true;
-            this.lblStdId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStdId.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblStdId.Location = new System.Drawing.Point(3, 0);
-            this.lblStdId.Name = "lblStdId";
-            this.lblStdId.Size = new System.Drawing.Size(92, 16);
-            this.lblStdId.TabIndex = 5;
-            this.lblStdId.Text = "StudentID";
-            // 
-            // cboAssessment
-            // 
-            this.cboAssessment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboAssessment.FormattingEnabled = true;
-            this.cboAssessment.Location = new System.Drawing.Point(341, 3);
-            this.cboAssessment.Name = "cboAssessment";
-            this.cboAssessment.Size = new System.Drawing.Size(124, 21);
-            this.cboAssessment.TabIndex = 17;
-            this.cboAssessment.Validating += new System.ComponentModel.CancelEventHandler(this.cboAssessment_Validating);
-            // 
-            // lblAssess
-            // 
-            this.lblAssess.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblAssess.AutoSize = true;
-            this.lblAssess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAssess.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAssess.Location = new System.Drawing.Point(253, 0);
-            this.lblAssess.Name = "lblAssess";
-            this.lblAssess.Size = new System.Drawing.Size(82, 16);
-            this.lblAssess.TabIndex = 16;
-            this.lblAssess.Text = "Assessment";
-            // 
-            // cboAssessComp
-            // 
-            this.cboAssessComp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboAssessComp.FormattingEnabled = true;
-            this.cboAssessComp.Location = new System.Drawing.Point(101, 43);
-            this.cboAssessComp.Name = "cboAssessComp";
-            this.cboAssessComp.Size = new System.Drawing.Size(146, 21);
-            this.cboAssessComp.TabIndex = 17;
-            this.cboAssessComp.SelectedIndexChanged += new System.EventHandler(this.cboAssessComp_SelectedIndexChanged);
-            this.cboAssessComp.Click += new System.EventHandler(this.cboAssessComp_Click);
-            this.cboAssessComp.Validating += new System.ComponentModel.CancelEventHandler(this.cboAssessComp_Validating);
-            // 
-            // lblAssessComp
-            // 
-            this.lblAssessComp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblAssessComp.AutoSize = true;
-            this.lblAssessComp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAssessComp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAssessComp.Location = new System.Drawing.Point(3, 40);
-            this.lblAssessComp.Name = "lblAssessComp";
-            this.lblAssessComp.Size = new System.Drawing.Size(92, 32);
-            this.lblAssessComp.TabIndex = 16;
-            this.lblAssessComp.Text = "Assessment\r\nComponent";
-            // 
-            // cboRubriclvl
-            // 
-            this.cboRubriclvl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboRubriclvl.FormattingEnabled = true;
-            this.cboRubriclvl.Location = new System.Drawing.Point(341, 43);
-            this.cboRubriclvl.Name = "cboRubriclvl";
-            this.cboRubriclvl.Size = new System.Drawing.Size(124, 21);
-            this.cboRubriclvl.TabIndex = 17;
-            this.cboRubriclvl.Validating += new System.ComponentModel.CancelEventHandler(this.cboAssessComp_Validating);
-            // 
-            // lblRubriclvl
-            // 
-            this.lblRubriclvl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRubriclvl.AutoSize = true;
-            this.lblRubriclvl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRubriclvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblRubriclvl.Location = new System.Drawing.Point(253, 40);
-            this.lblRubriclvl.Name = "lblRubriclvl";
-            this.lblRubriclvl.Size = new System.Drawing.Size(82, 16);
-            this.lblRubriclvl.TabIndex = 16;
-            this.lblRubriclvl.Text = "RubricLevel";
+            this.dtpDateEval.Location = new System.Drawing.Point(100, 83);
+            this.dtpDateEval.Name = "dtpDateEval";
+            this.dtpDateEval.Size = new System.Drawing.Size(146, 20);
+            this.dtpDateEval.TabIndex = 19;
             // 
             // lblEvalDate
             // 
@@ -254,18 +166,107 @@
             this.lblEvalDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblEvalDate.Location = new System.Drawing.Point(3, 80);
             this.lblEvalDate.Name = "lblEvalDate";
-            this.lblEvalDate.Size = new System.Drawing.Size(92, 32);
+            this.lblEvalDate.Size = new System.Drawing.Size(91, 32);
             this.lblEvalDate.TabIndex = 18;
             this.lblEvalDate.Text = "Evaluation \r\nDate";
             // 
-            // dtpDateEval
+            // cboAssessComp
             // 
-            this.dtpDateEval.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cboAssessComp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpDateEval.Location = new System.Drawing.Point(101, 83);
-            this.dtpDateEval.Name = "dtpDateEval";
-            this.dtpDateEval.Size = new System.Drawing.Size(146, 20);
-            this.dtpDateEval.TabIndex = 19;
+            this.cboAssessComp.FormattingEnabled = true;
+            this.cboAssessComp.Location = new System.Drawing.Point(100, 43);
+            this.cboAssessComp.Name = "cboAssessComp";
+            this.cboAssessComp.Size = new System.Drawing.Size(146, 21);
+            this.cboAssessComp.TabIndex = 17;
+            this.cboAssessComp.SelectedIndexChanged += new System.EventHandler(this.cboAssessComp_SelectedIndexChanged);
+            this.cboAssessComp.Click += new System.EventHandler(this.cboAssessComp_Click);
+            this.cboAssessComp.Validating += new System.ComponentModel.CancelEventHandler(this.cboAssessComp_Validating);
+            // 
+            // lblRubriclvl
+            // 
+            this.lblRubriclvl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRubriclvl.AutoSize = true;
+            this.lblRubriclvl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRubriclvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblRubriclvl.Location = new System.Drawing.Point(252, 40);
+            this.lblRubriclvl.Name = "lblRubriclvl";
+            this.lblRubriclvl.Size = new System.Drawing.Size(82, 16);
+            this.lblRubriclvl.TabIndex = 16;
+            this.lblRubriclvl.Text = "RubricLevel";
+            // 
+            // cboAssessment
+            // 
+            this.cboAssessment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboAssessment.FormattingEnabled = true;
+            this.cboAssessment.Location = new System.Drawing.Point(340, 3);
+            this.cboAssessment.Name = "cboAssessment";
+            this.cboAssessment.Size = new System.Drawing.Size(125, 21);
+            this.cboAssessment.TabIndex = 17;
+            this.cboAssessment.Validating += new System.ComponentModel.CancelEventHandler(this.cboAssessment_Validating);
+            // 
+            // lblAssessComp
+            // 
+            this.lblAssessComp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAssessComp.AutoSize = true;
+            this.lblAssessComp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAssessComp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblAssessComp.Location = new System.Drawing.Point(3, 40);
+            this.lblAssessComp.Name = "lblAssessComp";
+            this.lblAssessComp.Size = new System.Drawing.Size(91, 32);
+            this.lblAssessComp.TabIndex = 16;
+            this.lblAssessComp.Text = "Assessment\r\nComponent";
+            // 
+            // cboStdId
+            // 
+            this.cboStdId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboStdId.FormattingEnabled = true;
+            this.cboStdId.Location = new System.Drawing.Point(100, 3);
+            this.cboStdId.Name = "cboStdId";
+            this.cboStdId.Size = new System.Drawing.Size(146, 21);
+            this.cboStdId.TabIndex = 6;
+            this.cboStdId.Validating += new System.ComponentModel.CancelEventHandler(this.cboStdId_Validating);
+            // 
+            // lblAssess
+            // 
+            this.lblAssess.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAssess.AutoSize = true;
+            this.lblAssess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAssess.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblAssess.Location = new System.Drawing.Point(252, 0);
+            this.lblAssess.Name = "lblAssess";
+            this.lblAssess.Size = new System.Drawing.Size(82, 16);
+            this.lblAssess.TabIndex = 16;
+            this.lblAssess.Text = "Assessment";
+            // 
+            // lblStdId
+            // 
+            this.lblStdId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblStdId.AutoSize = true;
+            this.lblStdId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStdId.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblStdId.Location = new System.Drawing.Point(3, 0);
+            this.lblStdId.Name = "lblStdId";
+            this.lblStdId.Size = new System.Drawing.Size(91, 16);
+            this.lblStdId.TabIndex = 5;
+            this.lblStdId.Text = "StudentID";
+            // 
+            // cboRubriclvl
+            // 
+            this.cboRubriclvl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboRubriclvl.FormattingEnabled = true;
+            this.cboRubriclvl.Location = new System.Drawing.Point(340, 43);
+            this.cboRubriclvl.Name = "cboRubriclvl";
+            this.cboRubriclvl.Size = new System.Drawing.Size(125, 21);
+            this.cboRubriclvl.TabIndex = 17;
+            this.cboRubriclvl.Validating += new System.ComponentModel.CancelEventHandler(this.cboAssessComp_Validating);
             // 
             // btnSave
             // 
@@ -292,12 +293,26 @@
             this.lblInfo.TabIndex = 16;
             this.lblInfo.Text = "Information:";
             // 
+            // Backbtn
+            // 
+            this.Backbtn.BackColor = System.Drawing.Color.Teal;
+            this.Backbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Backbtn.ForeColor = System.Drawing.Color.Snow;
+            this.Backbtn.Location = new System.Drawing.Point(32, 524);
+            this.Backbtn.Name = "Backbtn";
+            this.Backbtn.Size = new System.Drawing.Size(75, 33);
+            this.Backbtn.TabIndex = 17;
+            this.Backbtn.Text = "Back";
+            this.Backbtn.UseVisualStyleBackColor = false;
+            this.Backbtn.Click += new System.EventHandler(this.Backbtn_Click);
+            // 
             // frmStudentResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(591, 588);
+            this.Controls.Add(this.Backbtn);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pnlStudentResult);
@@ -339,5 +354,6 @@
         private System.Windows.Forms.Label lblStdId;
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button Backbtn;
     }
 }

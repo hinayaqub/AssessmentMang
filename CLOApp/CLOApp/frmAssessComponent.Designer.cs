@@ -127,7 +127,7 @@
             this.tblLyoutPanelAssess.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.38095F));
             this.tblLyoutPanelAssess.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.61905F));
             this.tblLyoutPanelAssess.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.tblLyoutPanelAssess.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
+            this.tblLyoutPanelAssess.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 195F));
             this.tblLyoutPanelAssess.Controls.Add(this.lblTotalMarks, 2, 0);
             this.tblLyoutPanelAssess.Controls.Add(this.lblName, 0, 0);
             this.tblLyoutPanelAssess.Controls.Add(this.lblRubricId, 0, 1);
@@ -151,7 +151,7 @@
             this.lblTotalMarks.AutoSize = true;
             this.lblTotalMarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalMarks.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTotalMarks.Location = new System.Drawing.Point(237, 11);
+            this.lblTotalMarks.Location = new System.Drawing.Point(236, 11);
             this.lblTotalMarks.Name = "lblTotalMarks";
             this.lblTotalMarks.Size = new System.Drawing.Size(87, 20);
             this.lblTotalMarks.TabIndex = 3;
@@ -213,7 +213,7 @@
             "Lab9"});
             this.cboName.Location = new System.Drawing.Point(66, 10);
             this.cboName.Name = "cboName";
-            this.cboName.Size = new System.Drawing.Size(163, 21);
+            this.cboName.Size = new System.Drawing.Size(162, 21);
             this.cboName.TabIndex = 6;
             // 
             // cboRubricId
@@ -222,7 +222,7 @@
             this.cboRubricId.FormattingEnabled = true;
             this.cboRubricId.Location = new System.Drawing.Point(66, 53);
             this.cboRubricId.Name = "cboRubricId";
-            this.cboRubricId.Size = new System.Drawing.Size(163, 21);
+            this.cboRubricId.Size = new System.Drawing.Size(162, 21);
             this.cboRubricId.TabIndex = 7;
             // 
             // lblDate
@@ -231,7 +231,7 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblDate.Location = new System.Drawing.Point(261, 54);
+            this.lblDate.Location = new System.Drawing.Point(260, 54);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(39, 18);
             this.lblDate.TabIndex = 4;
@@ -248,10 +248,11 @@
             // txtTotalMarks
             // 
             this.txtTotalMarks.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTotalMarks.Location = new System.Drawing.Point(338, 11);
+            this.txtTotalMarks.Location = new System.Drawing.Point(337, 11);
             this.txtTotalMarks.Name = "txtTotalMarks";
             this.txtTotalMarks.Size = new System.Drawing.Size(179, 20);
             this.txtTotalMarks.TabIndex = 9;
+            this.txtTotalMarks.TextChanged += new System.EventHandler(this.txtTotalMarks_TextChanged);
             this.txtTotalMarks.Validating += new System.ComponentModel.CancelEventHandler(this.txtTotalMarks_Validating);
             // 
             // btnBack

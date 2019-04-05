@@ -117,5 +117,12 @@ namespace CLOApp
 
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmReports report = new frmReports();
+            report.Show();
+            this.Hide();
+        }
     }
 }
