@@ -172,5 +172,12 @@ namespace CLOApp
             rd.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+           frmManageCLO clo = new frmManageCLO();
+            clo.Show();
+            this.Hide();
+        }
     }
 }

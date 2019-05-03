@@ -225,5 +225,19 @@ namespace CLOApp
             rubriclvl.Show();
             this.Hide();
        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmRubrics1 r1 = new frmRubrics1();
+            r1.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmManageCLO clo = new frmManageCLO();
+            clo.Show();
+            this.Hide();
+        }
     }
 }

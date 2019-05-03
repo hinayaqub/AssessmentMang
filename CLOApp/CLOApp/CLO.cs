@@ -116,7 +116,7 @@ namespace CLOApp
                 SqlDataAdapter sqlDataAdapt = new SqlDataAdapter(rublvl, conn1);
                 sqlDataAdapt.SelectCommand.ExecuteNonQuery();
 
-                String cmd1 = "Delete FROM Rubric Where Rubric.Id = " + MyClass.RubricId;
+                String cmd1 = "Delete FROM Rubric Where CloId = " + MyClass.CLOid;
                 //SqlCommand cmd = new SqlCommand("SELECT * FROM Customer", conn);
                 SqlDataAdapter cmd = new SqlDataAdapter(cmd1, conn1);
                 cmd.SelectCommand.ExecuteNonQuery();

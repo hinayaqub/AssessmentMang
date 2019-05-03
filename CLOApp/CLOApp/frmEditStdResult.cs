@@ -66,7 +66,35 @@ namespace CLOApp
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if ((cboStdId.Text != "") && (cboRubriclvl.Text != "") && (cboAssessComp.Text != "") && (dtpDateEval.Text != "") )
+            {
+                String conURL1 = "Data Source = DESKTOP-RPO4Q5R\\PARVEEN; Initial Catalog = ProjectB ; User ID = mohsin; Password = mohsin123; MultipleActiveResultSets = True";
+                SqlConnection conn1 = new SqlConnection(conURL1);
+                conn1.Open();
+                
+               
+                String cmd1 = "update StudentResult set StudentId='" + cboStdId.Text + "', AssessmentComponentId= '" + cboAssessComp.Text + "',RubricMeasurementId= '" + cboRubriclvl.Text + "',EvaluationDate='" +
+                Convert.ToDateTime(dtpDateEval.Text) + "' Where  StudentId = '" + MyClass.stdres + "'";
 
+                SqlCommand cmd = new SqlCommand(cmd1, conn1);
+                MessageBox.Show("The Record  Has been updated");
+                try
+                {
+                    cmd.ExecuteReader();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex + " Record Has Been Updated ");
+                }
+                frmStudentResult addStd = new frmStudentResult();
+                addStd.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("All field should be field");
+            }
         }
     }
 }

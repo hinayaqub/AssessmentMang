@@ -116,6 +116,7 @@ namespace CLOApp
                 stream.Close();
 
             }
+            MessageBox.Show("Report Has been Created");
         }
 
         private void btnBack_Click(object sender, EventArgs e)

@@ -55,6 +55,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -87,7 +88,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.45763F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.54237F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 145F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
             this.tableLayoutPanel1.Controls.Add(this.richTextBox4, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
@@ -128,9 +129,9 @@
             // 
             this.richTextBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox4.Location = new System.Drawing.Point(143, 316);
+            this.richTextBox4.Location = new System.Drawing.Point(142, 316);
             this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(148, 29);
+            this.richTextBox4.Size = new System.Drawing.Size(147, 29);
             this.richTextBox4.TabIndex = 64;
             this.richTextBox4.Text = "";
             this.richTextBox4.Validating += new System.ComponentModel.CancelEventHandler(this.richTextBox4_Validating);
@@ -169,9 +170,9 @@
             // 
             this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(143, 33);
+            this.richTextBox1.Location = new System.Drawing.Point(142, 33);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(148, 36);
+            this.richTextBox1.Size = new System.Drawing.Size(147, 36);
             this.richTextBox1.TabIndex = 44;
             this.richTextBox1.Text = "";
             this.richTextBox1.Validating += new System.ComponentModel.CancelEventHandler(this.richTextBox1_Validating);
@@ -180,7 +181,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(297, 30);
+            this.label4.Location = new System.Drawing.Point(295, 30);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 36);
             this.label4.TabIndex = 46;
@@ -212,9 +213,9 @@
             "18",
             "19",
             "20"});
-            this.comboBox1.Location = new System.Drawing.Point(413, 33);
+            this.comboBox1.Location = new System.Drawing.Point(411, 33);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 21);
+            this.comboBox1.Size = new System.Drawing.Size(142, 21);
             this.comboBox1.TabIndex = 47;
             this.comboBox1.Validating += new System.ComponentModel.CancelEventHandler(this.comboBox1_Validating);
             // 
@@ -242,9 +243,9 @@
             // 
             this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox2.Location = new System.Drawing.Point(143, 125);
+            this.richTextBox2.Location = new System.Drawing.Point(142, 125);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(148, 37);
+            this.richTextBox2.Size = new System.Drawing.Size(147, 37);
             this.richTextBox2.TabIndex = 50;
             this.richTextBox2.Text = "";
             this.richTextBox2.Validating += new System.ComponentModel.CancelEventHandler(this.richTextBox2_Validating);
@@ -253,7 +254,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(297, 122);
+            this.label5.Location = new System.Drawing.Point(295, 122);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(110, 36);
             this.label5.TabIndex = 51;
@@ -285,9 +286,9 @@
             "18",
             "19",
             "20"});
-            this.comboBox2.Location = new System.Drawing.Point(413, 125);
+            this.comboBox2.Location = new System.Drawing.Point(411, 125);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(140, 21);
+            this.comboBox2.Size = new System.Drawing.Size(142, 21);
             this.comboBox2.TabIndex = 52;
             this.comboBox2.Validating += new System.ComponentModel.CancelEventHandler(this.comboBox2_Validating);
             // 
@@ -305,9 +306,9 @@
             // 
             this.richTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox3.Location = new System.Drawing.Point(143, 223);
+            this.richTextBox3.Location = new System.Drawing.Point(142, 223);
             this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(148, 32);
+            this.richTextBox3.Size = new System.Drawing.Size(147, 32);
             this.richTextBox3.TabIndex = 58;
             this.richTextBox3.Text = "";
             this.richTextBox3.Validating += new System.ComponentModel.CancelEventHandler(this.richTextBox3_Validating);
@@ -326,7 +327,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(297, 220);
+            this.label11.Location = new System.Drawing.Point(295, 220);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(110, 36);
             this.label11.TabIndex = 60;
@@ -358,9 +359,9 @@
             "18",
             "19",
             "20"});
-            this.comboBox3.Location = new System.Drawing.Point(413, 223);
+            this.comboBox3.Location = new System.Drawing.Point(411, 223);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(140, 21);
+            this.comboBox3.Size = new System.Drawing.Size(142, 21);
             this.comboBox3.TabIndex = 61;
             this.comboBox3.Validating += new System.ComponentModel.CancelEventHandler(this.comboBox3_Validating);
             // 
@@ -378,7 +379,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(297, 313);
+            this.label25.Location = new System.Drawing.Point(295, 313);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(110, 35);
             this.label25.TabIndex = 67;
@@ -410,9 +411,9 @@
             "18",
             "19",
             "20"});
-            this.comboBox4.Location = new System.Drawing.Point(413, 316);
+            this.comboBox4.Location = new System.Drawing.Point(411, 316);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(140, 21);
+            this.comboBox4.Size = new System.Drawing.Size(142, 21);
             this.comboBox4.TabIndex = 68;
             this.comboBox4.Validating += new System.ComponentModel.CancelEventHandler(this.comboBox4_Validating);
             // 
@@ -446,12 +447,26 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Teal;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(48, 531);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 34);
+            this.button4.TabIndex = 64;
+            this.button4.Text = "Back";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // frmAddRubricLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(655, 573);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -495,5 +510,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDetails;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button button4;
     }
 }
